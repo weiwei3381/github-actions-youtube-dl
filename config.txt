@@ -1,6 +1,18 @@
 --batch-file playlist.txt
+
+# download the filesize smaller than 95Mib, and download bestaudio
+-f "bestvideo[filesize<95M],bestaudio"
+
 --output downloads/%(title)s_%(id)s.%(ext)s
 --continue
+
+# download the worst quality video-only format
+# -f worstvideo
+
+
+
+# Always extract audio
+# -x
 # --write-description
 # --write-info-json
 # --write-thumbnail
